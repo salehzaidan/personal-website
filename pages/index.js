@@ -1,4 +1,7 @@
 import Head from "next/head";
+import Image from "next/image";
+
+import ProfilePicture from "../assets/zaidan.png";
 
 export default function Home() {
   return (
@@ -9,7 +12,32 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Hello World</main>
+      <main className="min-h-screen">
+        <section className="flex flex-col items-center justify-center bg-dark pt-8 text-white sm:flex-row sm:pt-0">
+          <div className="shrink-0">
+            <h2 className="text-[2.5rem] leading-tight">
+              Hi there!
+              <br />
+              I&apos;m{" "}
+              <span className="text-5xl font-semibold text-primary">
+                Zaidan
+              </span>
+            </h2>
+            <p className="mt-4 text-xl font-semibold">
+              AI and Web Dev
+              <br />
+              enthusiast
+            </p>
+            <p className="mt-2 text-xl">from Indonesia</p>
+          </div>
+          <Image
+            src={ProfilePicture}
+            alt="Profile Picture"
+            width={416}
+            height={416}
+          />
+        </section>
+      </main>
     </div>
   );
 }

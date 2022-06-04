@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/noto-sans': ^4.5.10
   autoprefixer: ^10.4.7
   eslint: 8.17.0
   eslint-config-next: 12.1.6
@@ -13,6 +14,7 @@ specifiers:
   tailwindcss: ^3.0.24
 
 dependencies:
+  '@fontsource/noto-sans': 4.5.10
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
@@ -59,6 +61,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@fontsource/noto-sans/4.5.10:
+    resolution: {integrity: sha512-sJ5WOE5zX9kFBZWsIRtGWTD2/DvashD1Q1L+Jhh5FccWLrug4REw2PVYItPnA8XBdQ09Vpxd8+I6UsKI/5QdFg==}
+    dev: false
 
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}
