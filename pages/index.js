@@ -37,6 +37,22 @@ export default function Home() {
             height={416}
           />
         </section>
+
+        <section className="bg-darker py-7 text-white sm:py-28">
+          <div className="mx-auto max-w-screen-sm px-4">
+            <h2 className="mb-4 text-xl font-semibold text-primary">
+              About me
+            </h2>
+            <p className="text-justify">
+              Zaidan is an Engineering Physics undergraduate student with great
+              interest in technology. He has some experience in artificial
+              intelligence (mostly in computer vision and deep learning),
+              fullstack web development, and other areas related to the current
+              technology trends. However there are still a lot of knowledge to
+              be learned so he is very open and eager to learn more.
+            </p>
+          </div>
+        </section>
       </main>
     </div>
   );
