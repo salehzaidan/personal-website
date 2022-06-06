@@ -1,0 +1,13 @@
+name: Indonesia Berkurban
+description: Fullstack app integrated with IoT for managing meat distribution and quality check during Eid al-Adha.
+date: 2021-09-08
+thumbnail: web-detail.jpeg
+images:
+  - src: local.jpeg
+    alt: Local info page
+  - src: admin.jpeg
+    alt: Admin detail page
+  - src: web-home.jpeg
+    alt: Web home page
+  - src: web-detail.jpeg
+    alt: Web detail page

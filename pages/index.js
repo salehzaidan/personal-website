@@ -1,3 +1,4 @@
+import fs from "fs";
 import Head from "next/head";
 import Image from "next/image";
 import {
@@ -6,10 +7,11 @@ import {
   IoLogoLinkedin,
   IoMail,
 } from "react-icons/io5";
+import YAML from "yaml";
 
 import ProfilePicture from "../assets/zaidan.png";
 
-export default function Home() {
+export default function Home({ works }) {
   return (
     <div>
       <Head>
@@ -64,49 +66,19 @@ export default function Home() {
               My latest works
             </h2>
             <div className="grid grid-cols-[minmax(0,_320px)] justify-center gap-8 sm:grid-cols-2">
-              <article className="text-center">
-                <div className="flex aspect-video items-center justify-center bg-gray-200 text-center text-xl font-semibold text-black shadow-xl">
-                  1
-                </div>
-                <h3 className="mt-4 font-semibold">Work #1</h3>
-                <p className="mt-2">
-                  Vivamus eleifend massa faucibus, rutrum eros auctor, dignissim
-                  orci.
-                </p>
-              </article>
-
-              <article className="text-center">
-                <div className="flex aspect-video items-center justify-center bg-gray-200 text-center text-xl font-semibold text-black shadow-xl">
-                  2
-                </div>
-                <h3 className="mt-4 font-semibold">Work #2</h3>
-                <p className="mt-2">
-                  In elementum sem nec ligula egestas facilisis sit amet nec
-                  nibh.
-                </p>
-              </article>
-
-              <article className="text-center">
-                <div className="flex aspect-video items-center justify-center bg-gray-200 text-center text-xl font-semibold text-black shadow-xl">
-                  3
-                </div>
-                <h3 className="mt-4 font-semibold">Work #3</h3>
-                <p className="mt-2">
-                  Vestibulum sit amet sapien vitae nulla ultrices porta sed quis
-                  enim.
-                </p>
-              </article>
-
-              <article className="text-center">
-                <div className="flex aspect-video items-center justify-center bg-gray-200 text-center text-xl font-semibold text-black shadow-xl">
-                  4
-                </div>
-                <h3 className="mt-4 font-semibold">Work #4</h3>
-                <p className="mt-2">
-                  Sed eleifend sem eget augue venenatis, eget lobortis augue
-                  pulvinar.
-                </p>
-              </article>
+              {works.map((work) => (
+                <article className="text-center" key={work.name}>
+                  <div className="relative flex aspect-video items-center justify-center bg-gray-200 text-center text-xl font-semibold text-black shadow-xl">
+                    <Image
+                      src={`/images/${work.slug}/${work.thumbnail}`}
+                      alt={work.name}
+                      layout="fill"
+                    />
+                  </div>
+                  <h3 className="mt-4 font-semibold">{work.name}</h3>
+                  <p className="mt-2">{work.description}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -162,4 +134,22 @@ export default function Home() {
       </footer>
     </div>
   );
+}
+
+export function getStaticProps() {
+  const filenames = fs.readdirSync("works", "utf-8");
+  const works = filenames
+    .map((filename) => {
+      const rawData = fs.readFileSync(`works/${filename}`, "utf-8");
+      const slug = filename.replace(/\.yaml/, "");
+      return {
+        ...YAML.parse(rawData),
+        slug,
+      };
+    })
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  return {
+    props: { works },
+  };
 }
