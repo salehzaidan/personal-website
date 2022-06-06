@@ -44,7 +44,7 @@ export default function Home() {
           />
         </section>
 
-        <section className="bg-darker py-7 text-white sm:py-28">
+        <section className="space-y-16 bg-darker py-7 text-white sm:py-28">
           <div className="mx-auto max-w-screen-sm px-4">
             <h2 className="mb-4 text-xl font-semibold text-primary">
               About me
@@ -57,6 +57,57 @@ export default function Home() {
               technology trends. However there are still a lot of knowledge to
               be learned so he is very open and eager to learn more.
             </p>
+          </div>
+
+          <div className="mx-auto max-w-screen-sm px-4">
+            <h2 className="mb-4 text-xl font-semibold text-primary">
+              My latest works
+            </h2>
+            <div className="grid grid-cols-[minmax(0,_320px)] justify-center gap-8 sm:grid-cols-2">
+              <article className="text-center">
+                <div className="flex aspect-video items-center justify-center bg-gray-200 text-center text-xl font-semibold text-black shadow-xl">
+                  1
+                </div>
+                <h3 className="mt-4 font-semibold">Work #1</h3>
+                <p className="mt-2">
+                  Vivamus eleifend massa faucibus, rutrum eros auctor, dignissim
+                  orci.
+                </p>
+              </article>
+
+              <article className="text-center">
+                <div className="flex aspect-video items-center justify-center bg-gray-200 text-center text-xl font-semibold text-black shadow-xl">
+                  2
+                </div>
+                <h3 className="mt-4 font-semibold">Work #2</h3>
+                <p className="mt-2">
+                  In elementum sem nec ligula egestas facilisis sit amet nec
+                  nibh.
+                </p>
+              </article>
+
+              <article className="text-center">
+                <div className="flex aspect-video items-center justify-center bg-gray-200 text-center text-xl font-semibold text-black shadow-xl">
+                  3
+                </div>
+                <h3 className="mt-4 font-semibold">Work #3</h3>
+                <p className="mt-2">
+                  Vestibulum sit amet sapien vitae nulla ultrices porta sed quis
+                  enim.
+                </p>
+              </article>
+
+              <article className="text-center">
+                <div className="flex aspect-video items-center justify-center bg-gray-200 text-center text-xl font-semibold text-black shadow-xl">
+                  4
+                </div>
+                <h3 className="mt-4 font-semibold">Work #4</h3>
+                <p className="mt-2">
+                  Sed eleifend sem eget augue venenatis, eget lobortis augue
+                  pulvinar.
+                </p>
+              </article>
+            </div>
           </div>
         </section>
       </main>
