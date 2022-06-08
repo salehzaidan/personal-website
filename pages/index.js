@@ -1,9 +1,9 @@
-import fs from "fs";
 import Image from "next/image";
-import YAML from "yaml";
 
 import ProfilePicture from "../assets/zaidan.png";
 import Layout from "../components/Layout";
+import WorkItem from "../components/WorkItem";
+import { fetchWorks } from "../lib/works";
 
 export default function Home({ works }) {
   return (
@@ -50,17 +50,7 @@ export default function Home({ works }) {
           </h2>
           <div className="grid grid-cols-[minmax(0,_320px)] justify-center gap-8 sm:grid-cols-2">
             {works.map((work) => (
-              <article className="text-center" key={work.name}>
-                <div className="relative flex aspect-video items-center justify-center bg-gray-200 text-center text-xl font-semibold text-black shadow-xl">
-                  <Image
-                    src={`/images/${work.slug}/${work.thumbnail}`}
-                    alt={work.name}
-                    layout="fill"
-                  />
-                </div>
-                <h3 className="mt-4 font-semibold">{work.name}</h3>
-                <p className="mt-2">{work.description}</p>
-              </article>
+              <WorkItem work={work} key={work.slug} />
             ))}
           </div>
         </div>
@@ -70,19 +60,7 @@ export default function Home({ works }) {
 }
 
 export function getStaticProps() {
-  const filenames = fs.readdirSync("works", "utf-8");
-  const works = filenames
-    .map((filename) => {
-      const rawData = fs.readFileSync(`works/${filename}`, "utf-8");
-      const slug = filename.replace(/\.yaml/, "");
-      return {
-        ...YAML.parse(rawData),
-        slug,
-      };
-    })
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
-
   return {
-    props: { works },
+    props: { works: fetchWorks(4) },
   };
 }
