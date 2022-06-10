@@ -19,10 +19,10 @@ export default function Layout({ children }) {
       <header className="bg-dark py-8 text-white">
         <nav className="mx-auto flex max-w-screen-sm justify-end gap-8 px-4">
           <Link href="/">
-            <a className="hover:text-primary">Home</a>
+            <a className="hover:text-primary focus:text-primary">Home</a>
           </Link>
           <Link href="/works">
-            <a className="hover:text-primary">Works</a>
+            <a className="hover:text-primary focus:text-primary">Works</a>
           </Link>
         </nav>
       </header>
