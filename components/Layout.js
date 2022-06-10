@@ -19,10 +19,14 @@ export default function Layout({ children }) {
       <header className="bg-dark py-8 text-white">
         <nav className="mx-auto flex max-w-screen-sm justify-end gap-8 px-4">
           <Link href="/">
-            <a className="hover:text-primary focus:text-primary">Home</a>
+            <a className="hover:text-primary-400 focus:text-primary-400">
+              Home
+            </a>
           </Link>
           <Link href="/works">
-            <a className="hover:text-primary focus:text-primary">Works</a>
+            <a className="hover:text-primary-400 focus:text-primary-400">
+              Works
+            </a>
           </Link>
         </nav>
       </header>
@@ -36,7 +40,7 @@ export default function Layout({ children }) {
               href="mailto:salehzaidan64@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary focus:text-primary"
+              className="hover:text-primary-400 focus:text-primary-400"
             >
               <IoMail size={20} />
             </a>
@@ -46,7 +50,7 @@ export default function Layout({ children }) {
               href="https://www.linkedin.com/in/saleh-zaidan"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary focus:text-primary"
+              className="hover:text-primary-400 focus:text-primary-400"
             >
               <IoLogoLinkedin size={20} />
             </a>
@@ -56,7 +60,7 @@ export default function Layout({ children }) {
               href="https://github.com/salehzaidan"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary focus:text-primary"
+              className="hover:text-primary-400 focus:text-primary-400"
             >
               <IoLogoGithub size={20} />
             </a>
@@ -66,7 +70,7 @@ export default function Layout({ children }) {
               href="https://www.instagram.com/salehzaidan_"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary focus:text-primary"
+              className="hover:text-primary-400 focus:text-primary-400"
             >
               <IoLogoInstagram size={20} />
             </a>

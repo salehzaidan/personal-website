@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import ProfilePicture from "../assets/zaidan.png";
 import Layout from "../components/Layout";
@@ -14,7 +15,9 @@ export default function Home({ works }) {
             Hi there!
             <br />
             I&apos;m{" "}
-            <span className="text-5xl font-semibold text-primary">Zaidan</span>
+            <span className="text-5xl font-semibold text-primary-400">
+              Zaidan
+            </span>
           </h2>
           <p className="mt-4 text-xl font-semibold">
             AI, IoT, and Web Dev
@@ -33,7 +36,9 @@ export default function Home({ works }) {
 
       <section className="mx-auto max-w-screen-sm space-y-16 px-4 py-7 sm:py-28">
         <div>
-          <h2 className="mb-4 text-xl font-semibold text-primary">About me</h2>
+          <h2 className="mb-4 text-xl font-semibold text-primary-400">
+            About me
+          </h2>
           <p className="text-justify">
             Zaidan is an Engineering Physics undergraduate student with great
             interest in technology. He has some experience in artificial
@@ -45,7 +50,7 @@ export default function Home({ works }) {
         </div>
 
         <div>
-          <h2 className="mb-4 text-xl font-semibold text-primary">
+          <h2 className="mb-4 text-xl font-semibold text-primary-400">
             My latest works
           </h2>
           <div className="grid grid-cols-[minmax(0,_320px)] justify-center gap-8 sm:grid-cols-2">
@@ -53,6 +58,11 @@ export default function Home({ works }) {
               <WorkItem work={work} key={work.slug} />
             ))}
           </div>
+          <Link href="works">
+            <a className="mx-auto mt-12 block w-fit items-center justify-center rounded bg-primary-400 px-4 py-2 text-darker shadow-xl hover:bg-primary-500 focus:bg-primary-500">
+              See more works
+            </a>
+          </Link>
         </div>
       </section>
     </Layout>

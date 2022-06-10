@@ -12,7 +12,7 @@ export default function Work({ work }) {
   return (
     <Layout>
       <section className="mx-auto max-w-screen-sm space-y-8 py-7 px-4 sm:py-28">
-        <div className="mb-4 flex justify-between font-semibold text-primary">
+        <div className="mb-4 flex justify-between font-semibold text-primary-400">
           <h2 className="text-2xl">{work.name}</h2>
           <p className="text-xl">{year}</p>
         </div>
@@ -20,7 +20,7 @@ export default function Work({ work }) {
         <div className="flex flex-wrap gap-4">
           {work.stack.map((stack) => (
             <div
-              className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-darker"
+              className="rounded-full bg-primary-400 px-4 py-2 text-sm font-semibold text-darker"
               key={stack}
             >
               {stack}
