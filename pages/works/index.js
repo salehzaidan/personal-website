@@ -1,6 +1,6 @@
-import Layout from "../components/Layout";
-import WorkItem from "../components/WorkItem";
-import { fetchWorks } from "../lib/works";
+import Layout from "../../components/Layout";
+import WorkItem from "../../components/WorkItem";
+import { fetchWorks } from "../../lib/works";
 
 export default function Works({ works }) {
   return (

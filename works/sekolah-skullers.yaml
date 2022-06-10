@@ -1,6 +1,11 @@
 name: Sekolah Skullers
 description: Gamification website for HMFT-ITB student orientation event.
 date: 2021-08-25
+stack:
+  - Django
+  - React
+  - Next.js
+  - CSS Modules
 thumbnail: home.jpeg
 images:
   - src: home.jpeg
