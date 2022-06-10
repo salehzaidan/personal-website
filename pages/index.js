@@ -31,6 +31,7 @@ export default function Home({ works }) {
           alt="Profile Picture"
           width={416}
           height={416}
+          priority
         />
       </section>
 

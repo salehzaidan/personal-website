@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function WorkItem({ work }) {
+export default function WorkItem({ work, priority = false }) {
   return (
     <Link href={`/works/${work.slug}`} key={work.name}>
       <a className="group text-center hover:text-primary-400 focus:text-primary-400">
@@ -10,7 +10,7 @@ export default function WorkItem({ work }) {
             src={`/images/${work.slug}/${work.thumbnail}`}
             alt={work.name}
             layout="fill"
-            priority
+            priority={priority}
           />
         </div>
         <h3 className="mt-4 font-semibold">{work.name}</h3>

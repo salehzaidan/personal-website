@@ -11,7 +11,7 @@ export default function Works({ works }) {
         </h2>
         <div className="grid grid-cols-[minmax(0,_320px)] justify-center gap-8 sm:grid-cols-2">
           {works.map((work) => (
-            <WorkItem work={work} key={work.slug} />
+            <WorkItem work={work} priority={true} key={work.slug} />
           ))}
         </div>
       </section>
