@@ -17,7 +17,7 @@ export default function Home({ works }) {
             <span className="text-5xl font-semibold text-primary">Zaidan</span>
           </h2>
           <p className="mt-4 text-xl font-semibold">
-            AI and Web Dev
+            AI, IoT, and Web Dev
             <br />
             enthusiast
           </p>
@@ -37,10 +37,10 @@ export default function Home({ works }) {
           <p className="text-justify">
             Zaidan is an Engineering Physics undergraduate student with great
             interest in technology. He has some experience in artificial
-            intelligence (mostly in computer vision and deep learning),
-            fullstack web development, and other areas related to the current
-            technology trends. However there are still a lot of knowledge to be
-            learned so he is very open and eager to learn more.
+            intelligence (mostly in computer vision and deep learning), internet
+            of things, fullstack web development, and other areas related to the
+            current technology trends. However there are still a lot of
+            knowledge to be learned so he is very open and eager to learn more.
           </p>
         </div>
 
