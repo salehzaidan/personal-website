@@ -58,7 +58,7 @@ export default function Home({ works }) {
               <WorkItem work={work} key={work.slug} />
             ))}
           </div>
-          <Link href="works">
+          <Link href="/works">
             <a className="mx-auto mt-12 block w-fit items-center justify-center rounded bg-primary-400 px-4 py-2 text-darker shadow-xl hover:bg-primary-500 focus:bg-primary-500">
               See more works
             </a>
