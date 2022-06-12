@@ -10,7 +10,7 @@ export default function Skills({ skills }) {
   const [activeSkill, setActiveSkill] = useState(null);
 
   return (
-    <Layout>
+    <Layout title="My skills">
       <section className="mx-auto max-w-screen-sm py-16">
         <SectionHeading>Skills</SectionHeading>
         <div className="grid auto-cols-fr grid-flow-col gap-8">

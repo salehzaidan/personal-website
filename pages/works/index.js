@@ -5,7 +5,7 @@ import { fetchWorks } from "../../lib/works";
 
 export default function Works({ works }) {
   return (
-    <Layout>
+    <Layout title="My works">
       <section className="mx-auto max-w-screen-sm py-16">
         <SectionHeading>My works</SectionHeading>
         <div className="grid grid-cols-[minmax(0,_320px)] justify-center gap-8 sm:grid-cols-2">
