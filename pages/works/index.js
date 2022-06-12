@@ -1,14 +1,13 @@
 import Layout from "../../components/Layout";
+import SectionHeading from "../../components/SectionHeading";
 import WorkItem from "../../components/WorkItem";
 import { fetchWorks } from "../../lib/works";
 
 export default function Works({ works }) {
   return (
     <Layout>
-      <section className="mx-auto max-w-screen-sm py-32">
-        <h2 className="mb-4 text-xl font-semibold text-primary-400">
-          My works
-        </h2>
+      <section className="mx-auto max-w-screen-sm py-16">
+        <SectionHeading>My works</SectionHeading>
         <div className="grid grid-cols-[minmax(0,_320px)] justify-center gap-8 sm:grid-cols-2">
           {works.map((work) => (
             <WorkItem work={work} priority={true} key={work.slug} />

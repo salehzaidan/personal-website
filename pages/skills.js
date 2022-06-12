@@ -4,6 +4,7 @@ import { useState } from "react";
 import YAML from "yaml";
 
 import Layout from "../components/Layout";
+import SectionHeading from "../components/SectionHeading";
 
 export default function Skills({ skills }) {
   const [activeSkill, setActiveSkill] = useState(null);
@@ -11,11 +12,11 @@ export default function Skills({ skills }) {
   return (
     <Layout>
       <section className="mx-auto max-w-screen-sm py-16">
-        <h2 className="mb-4 text-xl font-semibold text-primary-400">Skills</h2>
+        <SectionHeading>Skills</SectionHeading>
         <div className="grid auto-cols-fr grid-flow-col gap-8">
           {skills.map((skill) => (
             <button
-              className={`flex flex-col items-center gap-2.5 rounded bg-dark p-3 shadow-md hover:text-primary-400 hover:brightness-90 ${
+              className={`flex min-h-[7.625rem] flex-col items-center justify-center gap-2.5 rounded bg-dark p-3 shadow-md hover:text-primary-400 hover:brightness-90 ${
                 skill === activeSkill ? "text-primary-400 brightness-90" : ""
               }`}
               onClick={() => {

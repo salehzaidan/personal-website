@@ -3,13 +3,14 @@ import Link from "next/link";
 
 import ProfilePicture from "../assets/zaidan.png";
 import Layout from "../components/Layout";
+import SectionHeading from "../components/SectionHeading";
 import WorkItem from "../components/WorkItem";
 import { fetchWorks } from "../lib/works";
 
 export default function Home({ works }) {
   return (
     <Layout>
-      <section className="flex flex-col items-center justify-center bg-dark pt-8 text-white sm:flex-row sm:pt-0">
+      <section className="flex flex-col items-center justify-center bg-dark pt-8 sm:flex-row sm:pt-0">
         <div className="shrink-0">
           <h2 className="text-[2.5rem] leading-tight">
             Hi there!
@@ -36,10 +37,8 @@ export default function Home({ works }) {
       </section>
 
       <section className="mx-auto max-w-screen-sm space-y-16 px-4 py-7 sm:py-28">
-        <div>
-          <h2 className="mb-4 text-xl font-semibold text-primary-400">
-            About me
-          </h2>
+        <section>
+          <SectionHeading>About me</SectionHeading>
           <p className="text-justify">
             Zaidan is an Engineering Physics undergraduate student with great
             interest in technology. He has some experience in artificial
@@ -48,12 +47,10 @@ export default function Home({ works }) {
             current technology trends. However there are still a lot of
             knowledge to be learned so he is very open and eager to learn more.
           </p>
-        </div>
+        </section>
 
-        <div>
-          <h2 className="mb-4 text-xl font-semibold text-primary-400">
-            My latest works
-          </h2>
+        <section>
+          <SectionHeading>My latest works</SectionHeading>
           <div className="grid grid-cols-[minmax(0,_320px)] justify-center gap-8 sm:grid-cols-2">
             {works.map((work) => (
               <WorkItem work={work} key={work.slug} />
@@ -64,7 +61,7 @@ export default function Home({ works }) {
               See more works
             </a>
           </Link>
-        </div>
+        </section>
       </section>
     </Layout>
   );
