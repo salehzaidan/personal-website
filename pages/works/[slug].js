@@ -47,7 +47,7 @@ export default function Work({ work }) {
 export function getStaticPaths() {
   return {
     paths: fetchSlugs().map((slug) => ({ params: { slug } })),
-    fallback: true,
+    fallback: false,
   };
 }
 
