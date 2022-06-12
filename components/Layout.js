@@ -28,6 +28,11 @@ export default function Layout({ children }) {
               Works
             </a>
           </Link>
+          <Link href="/skills">
+            <a className="hover:text-primary-400 focus:text-primary-400">
+              Skills
+            </a>
+          </Link>
         </nav>
       </header>
 

@@ -1,0 +1,4 @@
+name: Internet of Things
+description: Zaidan has worked with several IoT systems. He worked on his final course task on smart building automation prototype that utilizes IoT in its architecture (MQTT for data transfer protocol and web app based GUI for user control).
+icon: carbon:iot-platform
+order: 3
